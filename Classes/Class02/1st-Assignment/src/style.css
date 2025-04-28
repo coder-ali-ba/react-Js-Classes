@@ -1,8 +1,4 @@
-/* *{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
-} */
+
 .heading{
     color: blue;
 }
@@ -12,18 +8,12 @@ box-sizing: border-box;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 16px 32px;
-    background-color: rgb(85, 77, 77);
-    color: rgb(255, 254, 254);
+    color: rgb(12, 12, 12);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: background-color 0.3s, color 0.3s;
     border-radius: 10px;
   }
-  
-  /* .header.dark {
-    background-color: #1f2937;
-    color: white;
-  } */
-  
+   
   .logo {
     font-size: 24px;
     font-weight: bold;
@@ -69,33 +59,16 @@ box-sizing: border-box;
     padding: 8px;
     border-radius: 50%;
     transition: background-color 0.3s;
-    color: white;
+    color: rgb(14, 13, 13);
   }
   
 
-  #bacImg{
-    margin-top: 10px;
-    width: 100%;
-    height: 80vh;
-    border-radius: 10px;
-  }
-  @media(max-width:625px){
-    #bacImg{
-      height: 50vh;
-    }
-  }
-  #cent {
-    text-align: center;
-    position: relative;
-    top: -250px;
-    color: white;
-  }
+
+ 
 
   #skd {
-    width: 95vw;
-    height: 500px;
-    border: 10px solid black;
-  
+    width: 97vw;
+    height: 200px;
   }
 
  
@@ -147,4 +120,151 @@ box-sizing: border-box;
   text-align: center;
  }
 
+ .para{
+  font-size: large;
+ }
  
+
+
+
+
+ #cards{
+  display: flex;
+
+  width: 100%;
+ 
+
+ }
+
+ #part1{
+  width: 65%;
+  height: 100%;
+ }
+ #part2{
+  width: 35%;
+  height: 100%;
+  margin-top: 20px;
+  padding-left: 10px;
+ }
+
+ .singleCard{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rgb(243, 241, 237); */
+  border-radius: 20px;
+  box-shadow: 5px 5px rgb(172, 170, 170);
+ }
+ .PKR{
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 10px;
+ }
+ .clock{
+  text-align: center;
+  padding-top: 40px;
+ }
+ .imag{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 2px;
+ }
+
+ .view{
+  padding: 10px 20px;
+
+ }
+ .AIR{
+  background-color: tomato;
+  margin-bottom: -2px;
+  width: 100px;
+ }
+
+ @media(max-width:950px){
+  .singleCard{
+    flex-direction: column;
+    align-items: center;
+  }
+ }
+
+
+
+.sra{
+display: flex;
+justify-content: space-around;
+}
+ .smImg{
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+ }
+
+ .love{
+  background-color: tomato;
+  color: white;
+  border: none;
+ }
+ .smPkr{
+  margin-left: 10px;
+ }
+
+
+ @media(max-width:700px){
+  #cards{
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    align-items: center;
+  }
+  #part2{
+    width: 100%;
+    padding: 0;
+  }
+#part2 h1 {
+  width: 100%;
+  text-align: center;
+}
+#part1{
+  width: 100%;
+  padding: 0;
+}
+.PKR h1{
+  font-size: medium;
+}
+.clock h1{
+  font-size: medium;
+}
+  .singleCard{
+    width: 95%;
+    margin-top: 100px;
+     }
+
+  .smImg{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+   }
+  
+
+   .clock{
+    margin-top: -30px;
+   }
+.AIR{
+  width: 40%;
+  height: 30px;
+  font-size: larger;
+  padding-top: 10px;
+}
+.PKR{
+  margin-top: -20px;
+}
+   .imag{
+    width: 100%;
+   
+   }
+   .airImg{
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+   }
+ }
