@@ -77,7 +77,32 @@ function Cards(){
            </div>
         </div>
 
+{/* 
+        <div className="singleCard">
+           <div className="imag">
+               <p className="AIR">BY Air Tour Package</p>
+               <img className="airImg"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5t048XMp-La9lBJfHyFtrXVoq6808faL3_w&s" alt="#" />
+           </div>
+           <div className="clock">
+               <h1>tigiuh ioghnf lkiewhfoiewhfio</h1>
+               <p><Clock size={20}></Clock>uheif</p>
+           </div>
+           <div className="PKR">
+             <h3>From PKR 234235 TO</h3>
+             <h1>PKR:23878</h1>
+             <p>
+              <Star size={24}></Star>
+              <Star size={24}></Star>
+              <Star size={24}></Star>
+              <Star size={24}></Star>
+              <Star size={24}></Star> 
+             </p>
+             <p>10 Reviews</p> 
+             <button className="view">View Details</button>
+           </div>
+        </div> */}
 
+{/* 
         <div className="singleCard">
            <div className="imag">
                <p className="AIR">BY Air Tour Package</p>
@@ -101,32 +126,7 @@ function Cards(){
              <button className="view">View Details</button>
            </div>
         </div>
-
-
-        <div className="singleCard">
-           <div className="imag">
-               <p className="AIR">BY Air Tour Package</p>
-               <img className="airImg"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5t048XMp-La9lBJfHyFtrXVoq6808faL3_w&s" alt="#" />
-           </div>
-           <div className="clock">
-               <h1>tigiuh ioghnf lkiewhfoiewhfio</h1>
-               <p><Clock size={20}></Clock>uheif</p>
-           </div>
-           <div className="PKR">
-             <h3>From PKR 234235 TO</h3>
-             <h1>PKR:23878</h1>
-             <p>
-              <Star size={24}></Star>
-              <Star size={24}></Star>
-              <Star size={24}></Star>
-              <Star size={24}></Star>
-              <Star size={24}></Star> 
-             </p>
-             <p>10 Reviews</p> 
-             <button className="view">View Details</button>
-           </div>
-        </div>
-
+ */}
 
       </div>
 
