@@ -4,15 +4,16 @@ import axios from 'axios';
 
 
 function App () {
-  const [getInput , setGetInput] = useState('')
+  const [getInput , setGetInput] = useState('karachi')
      
   const cityName = (value) => {
     setGetInput(value)
-    console.log(getInput);
+    // console.log(getInput);
     
    }
   
   const [weather , setWeather] = useState(null)
+  const [icon , setIcon] = useState(null)
  
      
      const getWeather = async() => {
@@ -24,7 +25,11 @@ function App () {
        const response =await axios.get((`https://api.openweathermap.org/data/2.5/weather?q=${getInput}&appid=${APIkey}&units=metric`))
        const data = response.data.main
        setWeather(data)
-       console.log(weather);
+       console.log(response.data);
+       
+       
+       const icon = response.data.weather[0].icon
+       setIcon(icon)
        
         } catch (error) {
       console.log(error.message);
@@ -39,11 +44,29 @@ function App () {
   }, [])
 
 
+                    // style
+const image ={
+  width:"200px",
+  height : "200px",
+  marginTop:"-50px"
+}
+
+const mainDiv ={
+  maxWidth :"400px",
+  minWidth : "300px",
+   background: "linear-gradient(to bottom, #1e3c72, #2a5298, #4facfe)",
+  textAlign:"center",
+  paddingTop:"30px",
+  paddingBottom:"30px",
+  margin:"auto",
+  color:"white",
+  borderRadius:"20px",
+  marginTop:"10vh"
+}
 
 
   return (
-    <div>
-      <h1>Weather App</h1>
+    <div style={mainDiv}>
       <input
         type="text"
         placeholder="Enter City name"
@@ -51,13 +74,25 @@ function App () {
         onChange={(e) => cityName(e.target.value)}
       />
       <button onClick={getWeather}>Check Weather</button>
-      <div>
-        <h2>City: {getInput}</h2>
+      <div >
+        <h2>{getInput}</h2>
         {weather && (
           <>
-            <h2>Temperature: {weather.temp} °C</h2>
-            <h2>Feels Like: {weather.feels_like} °C</h2>
-            <h2>Humidity: {weather.humidity}%</h2>
+            <img  style={image} src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt="#" />
+             <h4 style={{marginTop:"-30px"}}>{new Date().toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',   
+                month: 'long',     
+                day: 'numeric'  })}
+             </h4>
+            <h2 style={{marginTop:"-20px"}}>{weather.temp} °C</h2>
+            <div style={{display:"flex", gap:"10px", justifyContent:"center", marginTop:"70px"}}>
+              <h4>Max: {weather.temp_max} °C</h4>
+              <h4>Min: {weather.temp_min} °C</h4>
+              <h4>Humidity: {weather.humidity}%</h4>
+            </div>
+           
+            
           </>
         )}
       </div>
@@ -66,6 +101,8 @@ function App () {
 }
 
 export default App
+
+
 
 
 
