@@ -11,11 +11,12 @@ function App() {
 
  
   <Routes>
-    <AdminRoutes>
-      <Route path='/admindashboard' element={<AdminDashboard />}></Route>
-      <Route path='/allusers' element={<Allusers />}></Route>
-      <Route path='/allblogs' element={<Allblogs />}></Route>
-    </AdminRoutes>
+     <Route element={<AdminRoutes />}>
+        <Route path="/admindashboard" element={<AdminDashboard />} />
+        <Route path="/allusers" element={<Allusers />} />
+        <Route path="/allblogs" element={<Allblogs />} />
+        <Route index element={<AdminDashboard />} /> {/* Default page */}
+      </Route>
   </Routes>
 
 
@@ -23,7 +24,7 @@ function App() {
 
   return (
     <>
-     <LayoutPage />
+      <AdminRoutes />
     </>
   )
 }

@@ -16,8 +16,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
-import Allusers from './AdminPages/Allusers';
+import { Link, Outlet } from 'react-router-dom';
+
 
 const drawerWidth = 240;
 
@@ -95,7 +95,7 @@ function LayoutPage(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            ADMIN PORTAL
           </Typography>
         </Toolbar>
       </AppBar>
@@ -140,8 +140,8 @@ function LayoutPage(props) {
       >
         
         <Toolbar />
-      
-         { children }
+          
+       <Outlet />
       </Box>
     </Box>
   );

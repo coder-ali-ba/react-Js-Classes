@@ -2,7 +2,7 @@ import React from 'react'
 import LayoutPage from '../LayoutPage'
 
 function Allblogs() {
-    console.log("kjudsfuih");
+    
     
   return (
     
